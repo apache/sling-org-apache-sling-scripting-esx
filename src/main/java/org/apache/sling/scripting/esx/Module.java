@@ -505,7 +505,7 @@ public class Module extends SimpleBindings implements Require {
 
         for (int i = (parts.length - 1); i > 0;) {
             log.debug(parts[i]);
-            if (parts[i].equals("node_modules") || parts[i].equals("esx_modules")) {
+            if ("node_modules".equals(parts[i]) || "esx_modules".equals(parts[i])) {
                 continue;
             }
             String part = StringUtils.join(parts, "/", 0, i);
